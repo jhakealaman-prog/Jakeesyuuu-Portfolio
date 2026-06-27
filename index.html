@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+ <link rel="website icon" type="png" href="logo.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jakesyuu. | Rasid Jake Alaman Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#71757b",
+                    "surface-bright": "#fbf9f8",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container": "#efeded",
+                    "inverse-primary": "#adc6ff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001a41",
+                    "on-tertiary-fixed-variant": "#43474d",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#fdfcff",
+                    "primary-fixed": "#d8e2ff",
+                    "tertiary": "#585c62",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-container": "#3672d4",
+                    "inverse-surface": "#303031",
+                    "on-surface": "#1b1c1c",
+                    "on-primary-container": "#fefcff",
+                    "secondary": "#5f5e5e",
+                    "background": "#fbf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c6d4",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-background": "#1b1c1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-high": "#e9e8e7",
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-fixed-variant": "#004494",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "outline": "#727784",
+                    "tertiary-fixed-dim": "#c3c7cd",
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-dim": "#dbdad9",
+                    "on-secondary-container": "#636262",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e2dfde",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#424752",
+                    "on-error": "#ffffff",
+                    "primary": "#0b59ba",
+                    "surface-tint": "#125bbc",
+                    "on-tertiary-fixed": "#181c21",
+                    "on-secondary-fixed-variant": "#474746",
+                    "tertiary-fixed": "#dfe2e9",
+                    "surface": "#fbf9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "64px",
+                    "stack-md": "32px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "stack-xl": "120px",
+                    "margin-desktop": "80px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-shape {
+            border-top-left-radius: 160px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-image {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+          
+        }
+        .hero-image:hover {
+            transform: translateY(-8px) scale(1.09);
+            
+        }
+        .typing-cursor {
+            display: inline-block;
+            color: #0b59ba;
+            animation: blink 0.5s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:opacity-80 transition-opacity" href="#">Jakesyuu.</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-body-md text-body-md text-primary font-bold transition-colors" href="#home">Home</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-on-surface" id="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<div id="mobile-menu" class="mobile-menu md:hidden bg-background/95 backdrop-blur-md border-t border-outline-variant/10">
+<div class="px-margin-mobile py-6 space-y-4">
+<a class="block font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#home">Home</a>
+<a class="block font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="block font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+</div>
+</header>
+<main id="home">
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-32 md:pt-40 pb-20 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 items-center gap-gutter">
+<!-- Hero Content -->
+<div class="md:col-span-7 z-10">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-8">
+                        I'm <span id="typed-name" class="text-primary"></span><span class="typing-cursor">|</span><br/>
+<span class="text-on-surface">Junior Web Developer</span>
+</h1>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-lg hover:scale-[0.98] active:scale-95 transition-all mb-12" href="#projects">
+                        View Projects
+                    </a>
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md mb-4 text-on-surface">About me</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            I am a passionate Junior Web Developer focused on creating intuitive, high-performance web experiences. With a foundation in modern front-end frameworks and responsive design, I strive to bridge the gap between aesthetic vision and functional code. I thrive on solving complex problems and turning creative ideas into digital reality through clean, maintainable architecture.
+                        </p>
+</div>
+</div>
+<!-- Hero Graphic Area -->
+<div class="md:col-span-5 relative mt-12 md:mt-0 md:-mt-16 flex justify-center items-start">
+<div class="relative w-full aspect-[4/5] md:aspect-square max-w-md flex items-center justify-center">
+<!-- Background Blue Shape -->
+<div class="absolute inset-0 bg-primary-container hero-shape rounded-br-3xl -z-10 translate-x-4 translate-y-4"></div>
+<!-- Profile Image Placeholder -->
+<img class="hero-image mx-auto h-full w-auto object-contain relative -top-12 md:-top-16" src="jake.png"/>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="bg-primary pt-stack-xl pb-stack-xl text-on-primary" id="projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg">Projects</h2>
+<p class="font-body-lg text-body-lg opacity-80 max-w-md text-left md:text-right">
+                        A curated selection of digital experiences built with precision and modern technology.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project Card 1: Red Themed -->
+<div class="group bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col hover:translate-y-[-8px] transition-transform duration-300">
+<div class="aspect-video w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-fidelity mockup of a red-themed corporate landing page featuring a bold hero section with the headline 'Let's embark on Journey Together'. The design includes professional photos of a collaborative team, crisp white backgrounds, and vibrant red call-to-action buttons. The UI is clean, modern, and high-contrast, showcasing a premium digital brand identity." src="pro1.png"/>
+</div>
+<div class="p-8 text-on-surface">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-primary font-label-bold text-[12px] mb-4">WEB APP</span>
+<h3 class="font-headline-md text-headline-md mb-2">1015 Brilliant Mind Inc.</h3>
+<p class="text-secondary font-body-md line-clamp-2">A high-impact landing page designed for a recruitment agency, focusing on conversion and trust.</p>
+</div>
+</div>
+
+
+<!-- Project Card 2: Dark Hiring Platform -->
+<div class="group bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col hover:translate-y-[-8px] transition-transform duration-300">
+<div class="aspect-video w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated dark-themed web platform for an overseas manpower service. The interface features a deep charcoal background with golden-orange accents and high-contrast white text. A multi-step journey section is visible, demonstrating a complex but user-friendly dashboard layout with glowing card components and modern iconography." src="pro2.png"/>
+</div>
+<div class="p-8 text-on-surface">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-primary font-label-bold text-[12px] mb-4">WEB APP</span>
+<h3 class="font-headline-md text-headline-md mb-2">Job Con International</h3>
+<p class="text-secondary font-body-md line-clamp-2">A complex dark-mode hiring platform with interactive progress tracking and secure application portals.</p>
+</div>
+</div>
+<!-- Project Card 3: Blue Dashboard -->
+<div class="group bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col hover:translate-y-[-8px] transition-transform duration-300">
+<div class="aspect-video w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern administrative dashboard featuring a professional blue and deep navy color scheme. The interface shows real-time statistics, user profile lists with status indicators, and a clean sidebar navigation. The typography is sharp Inter sans-serif, and the overall design feels highly organized and technically advanced." src="pro3.png"/>
+</div>
+<div class="p-8 text-on-surface">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-primary font-label-bold text-[12px] mb-4">WEB APP</span>
+<h3 class="font-headline-md text-headline-md mb-2">Joseline International</h3>
+<p class="text-secondary font-body-md line-clamp-2">An integrated Human Resource management system with data visualization and automated workflow tools.</p>
+</div>
+</div>
+                    <div class="group bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col hover:translate-y-[-8px] transition-transform duration-300">
+                        <div class="aspect-video w-full overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern remote work dashboard with team collaboration metrics and concise action cards." src="pro4.png"/>
+                        </div>
+                        <div class="p-8 text-on-surface">
+                            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-primary font-label-bold text-[12px] mb-4">SYSTEM</span>
+                            <h3 class="font-headline-md text-headline-md mb-2">ASCLEPIUS MEDICAL SYSTEM</h3>
+                            <p class="text-secondary font-body-md line-clamp-2">A collaborative workspace dashboard built for remote teams and productivity tracking.</p>
+                        </div>
+                    </div>
+                    <div class="group bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col hover:translate-y-[-8px] transition-transform duration-300">
+                        <div class="aspect-video w-full overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean SaaS product landing page featuring a strong headline, feature tiles, and polished visuals." src="pro5.png"/>
+                        </div>
+                        <div class="p-8 text-on-surface">
+                            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-primary font-label-bold text-[12px] mb-4">WEB APP</span>
+                            <h3 class="font-headline-md text-headline-md mb-2">SIM-SOH</h3>
+                            <p class="text-secondary font-body-md line-clamp-2">A polished SaaS landing page with conversion-focused messaging and product highlights.</p>
+                            
+                        </div>
+                    </div>
+</div>
+</div>
+
+</section>
+<!-- Contact Section -->
+<section class="py-stack-xl bg-background" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Contact Information</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mb-8">
+                        Reach out directly to discuss your next web project, collaboration, or available opportunities. Here’s how to contact me.
+                    </p>
+<div class="grid gap-4 text-on-surface">
+<div class="rounded-[20px] border border-outline-variant/20 bg-surface-container p-6">
+<p class="font-label-bold text-label-bold text-primary mb-2">Name</p>
+<p class="font-body-md text-body-md">Rasid Jake Alaman</p>
+</div>
+<div class="rounded-[20px] border border-outline-variant/20 bg-surface-container p-6">
+<p class="font-label-bold text-label-bold text-primary mb-2">Role</p>
+<p class="font-body-md text-body-md">Junior Web Developer</p>
+</div>
+<div class="rounded-[20px] border border-outline-variant/20 bg-surface-container p-6">
+<p class="font-label-bold text-label-bold text-primary mb-2">Email</p>
+<p class="font-body-md text-body-md">jhakealaman@gmail.com</p>
+</div>
+<div class="rounded-[20px] border border-outline-variant/20 bg-surface-container p-6">
+<p class="font-label-bold text-label-bold text-primary mb-2">Phone</p>
+<p class="font-body-md text-body-md"> (+69) 9941 564 962</p>
+</div>
+<div class="rounded-[20px] border border-outline-variant/20 bg-surface-container p-6">
+<p class="font-label-bold text-label-bold text-primary mb-2">Location</p>
+<p class="font-body-md text-body-md">Tupi (9505) ,South Cotabato ,Philippines</p>
+</div>
+</div>
+</div>
+<div class="rounded-[32px] bg-primary-container p-10">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Let's connect</h3>
+<p class="font-body-lg text-body-lg text-on-surface mb-6">I’m available for freelance work, contract roles, and full-time opportunities. Send a message and I’ll respond quickly.</p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-bold text-label-bold px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors" href="mailto:hello@jakesyuu.com">Email Rasid</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Jakesyuu.</span>
+<p class="font-body-md text-on-surface-variant">© 2026 Rasid Jake Alaman. All rights reserved.</p>
+</div>
+<div class="flex gap-10">
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#home">Home</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#contact">Contact</a>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-background flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-background flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Typewriter animation for hero heading
+        const typedName = document.getElementById('typed-name');
+        const nameText = 'Rasid Jake Alaman';
+        let typedIndex = 0;
+
+        function typeName() {
+            if (typedIndex <= nameText.length) {
+                typedName.textContent = nameText.slice(0, typedIndex);
+                typedIndex += 1;
+                setTimeout(typeName, 90);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            typeName();
+        });
+
+        // Mobile Menu Logic (Minimalist implementation)
+        const menuBtn = document.getElementById('menu-btn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                // Logic for a real drawer would go here
+                alert('Mobile navigation would open here in a full production environment.');
+            });
+        }
+
+        // Active State Logic for Nav
+        window.addEventListener('scroll', () => {
+            const sections = ['home', 'projects', 'contact'];
+            let current = '';
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 150) {
+                        current = section;
+                    }
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('text-primary', 'font-bold');
+                link.classList.add('text-on-surface');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'font-bold');
+                    link.classList.remove('text-on-surface');
+                }
+            });
+        });
+    </script>
+</body></html>
